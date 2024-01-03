@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  html , body , #root {
+@layer base {
+
+  html,
+  body,
+  #root {
     @apply bg-darkblue
   }
 }
 
+.card-skeleton {
+  display: flex;
+  width: 420px;
+  min-height: 127px;
+  padding: 0.5rem;
+  margin-bottom:5px ;
+  border: 1px solid #e5e7eb ;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card-skeleton .left-col {
+  margin-right: 1rem;
+}
+
+.card-skeleton .right-col {
+  flex: 1;
+}

@@ -2,13 +2,27 @@ import React from 'react';
 import Ellipse from '../assets/img/Ellipse 1.png';
 import { ThumbsUp, ThumbsDown, Edit3, Trash2, Smile, Paperclip } from 'react-feather';
 
-const Comment = ({ comment, indexNo, isEditing, editCommentIndex, textareaValue, isEditingComments, handleEditClick, handleTextareaChange, handleSaveClick, handleDelete, likef, dislikef, setIsEditingComments, setIsEditing }) => {
+const Comment = ({
+    comment, 
+    indexNo, 
+    isEditing, 
+    editCommentIndex, 
+    textareaValue, 
+    isEditingComments, 
+    handleEditClick,
+    handleTextareaChange, 
+    handleSaveClick, 
+    handleDelete, 
+    likef, 
+    dislikef, 
+    setIsEditingComments,  
+    setIsEditing }) => {
     return (
         <div key={indexNo} className="mb-2 bg-white rounded-[5px] w-[420px]">
             <div className="flex  items-center m-[20px] ">
                 <img className="w-[40px] h-[40px]" src={Ellipse} alt="avatar" />
                 <div className="ml-[10px] relative">
-                    <p className="text-datecolor text-[8px]">{comment.date}</p>
+                    <p className="text-datecolor text-[8px]">{comment.date }</p>
 
                     {editCommentIndex === indexNo && isEditingComments[indexNo] === true ? (
                         <form>
